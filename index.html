@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+</head>
+<body>
+
+    <script>
+let arr = [12, 33, 4, 5, -4, 8, 19, 25];
+
+// map() creates a new array by applying a function to each element
+function double(num){
+  return num * 2;
+}
+let doubledArr = arr.map(double); 
+console.log(doubledArr); // [24, 66, 8, 10, -8, 16, 38, 50]
+
+// filter() returns only elements that satisfy a condition
+function isOdd(num){
+  return num % 2 !== 0; 
+}
+let odds = arr.filter(isOdd);
+console.log(odds); // [33, 5, 19, 25]
+
+// some() checks if any element meets a condition
+function has5Factor(num){
+  return num % 5 === 0;
+}
+let hasFiveFactor = arr.some(has5Factor);
+console.log(hasFiveFactor); // true
+
+// sort() needs a comparison function
+function intCompare(a, b){
+ return a - b;
+}
+let ascending = arr.sort(intCompare);
+console.log(ascending); // [-4, 4, 5, 8, 12, 19, 25, 33]
+</script>
+
+</body>
+</html>
